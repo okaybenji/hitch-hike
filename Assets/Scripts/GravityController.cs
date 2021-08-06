@@ -1,19 +1,17 @@
 using UnityEngine;
 
 public class GravityController : MonoBehaviour {
-  // int interval = 1;
-  // float nextTime = 0;
+  GameObject _planet;
+
   float strength = 9.8f;
 
-  // void Update () {
-  //   if (Time.time >= nextTime) {
-  //     Physics.gravity = new Vector3(-gameObject.transform.up.x, -gameObject.transform.up.y, -gameObject.transform.up.z) * strength;
-  //       // Debug.Log("Gravity is now:" + Physics.gravity.ToString());
-  //     nextTime += interval;
-  //   }
-  // }
+  void OnEnable() {
+    _planet = Utils.Find("Planet");
+  }
+
   void Update() {
-    Physics.gravity = new Vector3(-gameObject.transform.up.x, -gameObject.transform.up.y, -gameObject.transform.up.z) * strength;
-        // Debug.Log("Gravity is now:" + Physics.gravity.ToString());
+    Vector3 vectorTowardPlanet = _planet.transform.position - gameObject.transform.position;
+    Physics.gravity = Vector3.Normalize(vectorTowardPlanet) * strength;
+    // Debug.Log("Gravity is now:" + Physics.gravity.ToString());
   }
 }
