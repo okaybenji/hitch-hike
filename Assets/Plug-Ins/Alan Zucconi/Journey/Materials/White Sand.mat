@@ -8,15 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: White Sand
-  m_Shader: {fileID: 4800000, guid: c4c8a1a1c0b1a414a81c41baf55aa0a4, type: 3}
-  m_ShaderKeywords: _DIFFUSEENABLED_ON _GLITTERENABLED_ON _OCEANSPECULARENABLED_ON
+  m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _COLOROVERLAY_ON _DIFFUSEENABLED_ON _GLITTERENABLED_ON _OCEANSPECULARENABLED_ON
     _RIMENABLED_ON _SANDENABLED_ON _WAVESENABLED_ON
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - ALWAYS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -82,16 +83,29 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BlendOp: 0
     - _BumpScale: 1
+    - _CameraFadingEnabled: 0
+    - _CameraFarFadeDistance: 2
+    - _CameraNearFadeDistance: 1
+    - _ColorMode: 3
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DiffuseEnabled: 1
+    - _DistortionBlend: 0.5
+    - _DistortionEnabled: 0
+    - _DistortionStrength: 1
+    - _DistortionStrengthScaled: 0
     - _DstBlend: 0
+    - _EmissionEnabled: 0
+    - _FlipbookMode: 0
     - _GlitterEnabled: 1
     - _GlitterThreshold: 0.183
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LightingEnabled: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -105,6 +119,9 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SnowBlendAmount: 1
     - _SnowBlendMulti2: 1
+    - _SoftParticlesEnabled: 0
+    - _SoftParticlesFarFadeDistance: 1
+    - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SteepnessSharpnessPower: 0.1
@@ -117,11 +134,14 @@ Material:
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 0.8396226, g: 0.81224763, b: 0.19406372, a: 1}
+    - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+    - _Color: {r: 0.9647059, g: 0.76862746, b: 0.19215687, a: 1}
+    - _ColorAddSubDiff: {r: -1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlitterColor: {r: 3.8436549, g: 5.088412, b: 0.6000485, a: 1}
     - _OceanSpecularColor: {r: 0.8962264, g: 0.7905393, b: 0.79425836, a: 1}
     - _ShadowColor: {r: 0.4575472, g: 0.62138736, b: 1, a: 1}
+    - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _TerrainColor: {r: 0.36645603, g: 0.50841415, b: 0.5754717, a: 1}
     - _TerrainRimColor: {r: 0.7971698, g: 0.83632016, b: 1, a: 1}
   m_BuildTextureStacks: []
