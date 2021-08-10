@@ -2,6 +2,8 @@
 
 *Hitch-Hike* is a first-person adventure game where you drive a car along a desert road, picking up travelers along the way & helping them to get where they're headed.
 
+**This is a work-in-progress in active development.**
+
 Made for the [2021 A Game By Its Cover jam](https://itch.io/jam/a-game-by-its-cover-2021).
 
 ![Concept art for Hitch-Hike -- POV inside the car](Assets/Concepts/unknown-1.png)
