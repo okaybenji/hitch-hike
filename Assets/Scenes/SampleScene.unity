@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &59185010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,7 +1621,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 8, z: 0}
   m_Axis: {x: 0.002, y: 0.002, z: 0.002}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.079999976, y: 0.9994, z: 0.09873591}
+  m_ConnectedAnchor: {x: -0.079999976, y: 0.9994, z: 0.10213593}
   m_UseSpring: 1
   m_Spring:
     spring: 1
