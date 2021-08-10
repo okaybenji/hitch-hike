@@ -12,7 +12,7 @@ Made for the [2021 A Game By Its Cover jam](https://itch.io/jam/a-game-by-its-co
 ![Concept art for Hitch-Hike -- POV above the car](Assets/Concepts/Famicase6.jpg)
 *Concept art by Noli.*
 
-Based on the 2019 My Famicase Exhibition entry by Scott Polhemus & nomi.
+Based on the [2019 My Famicase Exhibition](https://famicase.com/19/) entry by Scott Polhemus & nomi.
 
 ## Our Team
 Noli, Po, LGM, Nomi & Benji
