@@ -29,6 +29,8 @@ namespace UnityStandardAssets.Vehicles.Car
             FourChannel // four Channel audio
         }
 
+        [Range(0, 1f)]
+        public float volume;
         public EngineAudioOptions engineSoundStyle = EngineAudioOptions.FourChannel;// Set the default audio options to be four channel
         public AudioClip lowAccelClip;                                              // Audio clip for low acceleration
         public AudioClip lowDecelClip;                                              // Audio clip for low deceleration
@@ -114,7 +116,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     // for 1 channel engine sound, it's oh so simple:
                     m_HighAccel.pitch = pitch*pitchMultiplier*highPitchMultiplier;
                     m_HighAccel.dopplerLevel = useDoppler ? dopplerLevel : 0;
-                    m_HighAccel.volume = 1;
+                    m_HighAccel.volume = 1 * volume;
                 }
                 else
                 {
@@ -141,10 +143,10 @@ namespace UnityStandardAssets.Vehicles.Car
                     decFade = 1 - ((1 - decFade)*(1 - decFade));
 
                     // adjust the source volumes based on the fade values
-                    m_LowAccel.volume = lowFade*accFade;
-                    m_LowDecel.volume = lowFade*decFade;
-                    m_HighAccel.volume = highFade*accFade;
-                    m_HighDecel.volume = highFade*decFade;
+                    m_LowAccel.volume = lowFade*accFade * volume;
+                    m_LowDecel.volume = lowFade*decFade * volume;
+                    m_HighAccel.volume = highFade*accFade * volume;
+                    m_HighDecel.volume = highFade*decFade * volume;
 
                     // adjust the doppler levels
                     m_HighAccel.dopplerLevel = useDoppler ? dopplerLevel : 0;

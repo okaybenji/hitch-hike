@@ -13,6 +13,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public bool PlayingAudio { get; private set; }
 
 
+        private CarAudio _carAudio;
         private AudioSource m_AudioSource;
         private Transform m_SkidTrail;
         private WheelCollider m_WheelCollider;
@@ -33,6 +34,11 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_WheelCollider = GetComponent<WheelCollider>();
             m_AudioSource = GetComponent<AudioSource>();
+
+            // NOTE: Set up this way, the volume will not be updated (if it changes) until the game restarts.
+            _carAudio = Utils.Find("Car").GetComponent<CarAudio>();
+            m_AudioSource.volume = _carAudio.volume;
+
             PlayingAudio = false;
 
             if (skidTrailsDetachedParent == null)
