@@ -12,5 +12,8 @@ public class DropOff : MonoBehaviour {
     foreach (Transform child in _passengers.transform) {
       child.gameObject.SetActive(false);
     }
+
+    // Play the sound of them getting out of the car.
+    _passengers.GetComponent<AudioSource>().Play();
   }
 }
