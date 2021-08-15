@@ -6,7 +6,9 @@ public class Hitchhiker : MonoBehaviour {
   GameObject _talkBubble;
   GameObject _radio;
   void OnEnable() {
-    _passenger = Utils.Find("Passenger");
+    // e.g. Hitch-Hiker "Kev"'s Passenger GameObject will be called "Kev2"
+    Debug.Log("Getting passenger named: " + gameObject.name + "2");
+    _passenger = Utils.Find(gameObject.name + "2");
     _radio = Utils.Find("Radio");
   }
 
